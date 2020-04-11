@@ -1,0 +1,24 @@
+{% extends 'recruitment/Home.html' %}
+
+{% block content %}
+<script type="text/Javascript">
+    function getUserSelection() {
+        displayRecruit = document.querySelector('#sithdropdown')   
+        ans = displayRecruit.options[displayRecruit.selectedIndex].value;   
+        document.querySelector('#getrecruit').textContent=ans ;            
+    }
+</script>
+
+    <select name="dropdown" id="sithdropdown" >  
+        <option disabled='true'selected>-----select recruits-----</option>   
+
+        {% for s in sith  %}
+            <option >{{ s.sith_names }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Click"  onclick="getUserSelection" />   
+    <b id="getrecruit"></b>
+    <h4>{{ s }}</h4>
+
+
+{% endblock %}

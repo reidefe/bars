@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+  
+    <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Join The Dark Side</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <base href="/">
+    {% load static %}
+   
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'recruitment/Home.css' %}">   
+
+</head>
+
+<body>    
+    <section class="stripe" id="dark">
+        <div class="container">
+            
+            <div class="person" id="phasma">
+                <div class="body">
+                    <div class="pauldron"></div>
+                </div>
+                <div class="cape"></div>
+                <div class="chin"></div>
+                <div class="helmet">
+                    <div class="mouth">
+                        <div class="mouth-plate"></div>
+                    </div>
+                    <div class="eyes"></div>
+                    <div class="brow"></div>
+                    <div class="helmet-stripe-holder">
+                        <div class="helmet-stripe"></div>
+                    </div>
+                </div>
+                <div class="lightsaber"></div>
+                <div class="hilt"></div>
+            </div>
+            
+            <div class="person" id="kylo">
+                <div class="cloak"></div>
+                <div class="body"></div>
+                <div class="cloak-front"></div>
+                <div class="hood">
+                    <div class="hood-bottom"></div>
+                </div>
+                <div class="mask">
+                    <div class="mask-breather">
+                        <div class="mask-breather-bottom"></div>
+                    </div>
+                    <div class="mask-1"></div>
+                    <div class="mask-2"></div>
+                    <div class="eyes"></div>
+                </div>			
+                <div class="lightsaber"></div>
+                <div class="hilt"></div>
+            </div>
+            
+            <div class="person" id="hux">
+                <div class="ear left"></div>
+                <div class="ear right"></div>
+                <div class="hair"></div>
+                <div class="face">
+                    <div class="hair-under"></div>
+                    <div class="eyes"></div>
+                    <div class="nose"></div>
+                    <div class="mouth"></div>
+                </div>
+                <div class="pouf"></div>
+                <div class="neck"></div>
+                <div class="body">
+                    <div class="patch"></div>
+                </div>
+                <div class="lightsaber"></div>
+                <div class="hilt"></div>
+            </div>
+    
+        </div>
+    </section>   
+    <section class='lower'>
+        <div class="container2"> 
+            <a href="/recruitment/home">Home</a>   
+            <a href="/recruitment/sith">for Siths only</a> 
+            <a href="/recruitment/serve_us">Join the dark side</a>        
+            {% block content %}
+            {% endblock %}
+        </div>
+
+    </section>
+</body>
+</html>

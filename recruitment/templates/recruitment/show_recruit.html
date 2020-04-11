@@ -1,0 +1,13 @@
+{% extends "recruitment/Home.html" %}
+
+{% block content %}
+
+<form method="post" id="enrollment_form" >
+    {% csrf_token %}
+    {{ s.name }}
+    <br>
+    <input type="submit" >    
+</form>
+
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'recruitment/Home.html' %}
+
+{% block content %}
+
+
+<form method="post">
+    {% csrf_token %}    
+    {% for question in q %}
+    <h4>{{question.question_text}}</h4>
+    {{ form.as_p }}
+    {% endfor %}
+    <input type="submit" >
+</form>
+
+{% endblock %}
