@@ -9,16 +9,14 @@
     }
 </script>
 
-    <select name="dropdown" id="sithdropdown" >  
-        <option disabled='true'selected>-----select recruits-----</option>   
+   
+<form method="POST">
+    {% csrf_token %}
+    {{ form }}    
+    <input type="submit" > 
+</form>
 
-        {% for s in sith  %}
-            <option >{{ s.sith_names }}</option>
-        {% endfor %}
-    </select>
-    <input type="submit" value="Click"  onclick="getUserSelection" />   
-    <b id="getrecruit"></b>
-    <h4>{{ s }}</h4>
+
 
 
 {% endblock %}

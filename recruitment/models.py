@@ -12,8 +12,12 @@ class Sith(models.Model):
     
     #message = models.OneToOneField(Msg,on_delete=models.CASCADE)   
 
+    
+    class Meta:
+        ordering = ['sith_names']
+
     def __str__(self):
-        return self.sith_names
+        return self.planet
    
 
 class Questions(models.Model):
@@ -24,13 +28,17 @@ class Questions(models.Model):
     def __str__(self):
         return self.question_text
 
+
+
+    
+
 class Recruit(models.Model):
     name = models.CharField(max_length=50)
     planet = models.CharField(max_length=250)
     intergalactic_email = models.EmailField(max_length=254)
     age = models.IntegerField()
     created = models.DateTimeField(auto_now=True)
-    notification = models.CharField(max_length=1000)   
+    questions = models.ForeignKey(Questions, on_delete=models.CASCADE)
     designated_sith = models.ManyToManyField(Sith,null=True) 
     def __str__(self):
         return self.name
